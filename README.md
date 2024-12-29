@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Solar Years - New Year Countdown Timers Across the Solar System
 
-## Getting Started
+Welcome to **Solar Years**! 🚀🎉 This app lets you track the countdown to the New Year on every planet in our solar system. Why celebrate just Earth’s New Year when you can party across the entire solar system? 🌍🪐
 
-First, run the development server:
+## Features:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+-  **Countdown Timers:** Get the exact countdown to the New Year on each planet.
+-  **Planetary Info:** Learn about the unique year lengths and fun facts of each planet.
+-  **Fun & Interactive:** An educational, fun way to explore the solar system and understand how different planetary years work!
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Planets:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+-  **Mercury** - The fastest planet with a year length of just 88 Earth days.
+-  **Venus** - A year on Venus lasts 225 Earth days.
+-  **Earth** - The familiar 365.25-day year we know and love.
+-  **Mars** - A Martian year lasts 687 Earth days.
+-  **Jupiter** - A whopping 4333 Earth days to complete one orbit.
+-  **Saturn** - A year on Saturn lasts 10,759 Earth days (about 29.5 Earth years).
+-  **Uranus** - A year on Uranus is 30,687 Earth days (about 84 Earth years).
+-  **Neptune** - A Neptunian year lasts 60,190 Earth days (about 165 Earth years).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Built By:
 
-## Learn More
+**Manohar Maharshi** - The creator of this fun and educational space app! 🌌
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Connect with me: [Twitter](https://x.com/mmmmaharshi)
