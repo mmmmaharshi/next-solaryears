@@ -35,50 +35,55 @@ export default function Home() {
 				</p>
 			</header>
 
-			<section className='mt-6 grid grid-cols-1 lg:grid-cols-2 gap-4'>
-				{planets.map(
-					({
-						name,
-						description,
-						currentYear,
-						remainingDays,
-						earthYears,
-					}) => (
-						<div key={name} className='card bg-base-300'>
-							<div className='card-body'>
-								<div className='flex justify-between items-center'>
-									<h2 className='card-title text-primary text-3xl'>
-										{name}
-									</h2>
-									<span className='text-2xl font-semibold'>
-										{currentYear} CE
-									</span>
-								</div>
-								<p className='pt-1'>{description}</p>
-								<div className='card-actions mt-2'>
-									<div className='text-xl text-primary'>
-										{remainingDays === 0 && earthYears === 0 ? (
-											<p>
-												🎉 Happy New Year {currentYear} on {name}!
-												🎊
-											</p>
-										) : earthYears > 0 ? (
-											<p>
-												{earthYears} years, {remainingDays} days
-												until {currentYear + 1}
-											</p>
-										) : (
-											<p>
-												{remainingDays} days until {currentYear + 1}
-											</p>
-										)}
+			{planets.length > 0 ? (
+				<section className='mt-6 grid grid-cols-1 lg:grid-cols-2 gap-4'>
+					{planets.map(
+						({
+							name,
+							description,
+							currentYear,
+							remainingDays,
+							earthYears,
+						}) => (
+							<div key={name} className='card bg-base-300'>
+								<div className='card-body'>
+									<div className='flex justify-between items-center'>
+										<h2 className='card-title text-primary text-3xl'>
+											{name}
+										</h2>
+										<span className='text-2xl font-semibold'>
+											{currentYear} CE
+										</span>
+									</div>
+									<p className='pt-1'>{description}</p>
+									<div className='card-actions mt-2'>
+										<div className='text-xl text-primary'>
+											{remainingDays === 0 && earthYears === 0 ? (
+												<p>
+													🎉 Happy New Year {currentYear} on {name}
+													! 🎊
+												</p>
+											) : earthYears > 0 ? (
+												<p>
+													{earthYears} years, {remainingDays} days
+													until {currentYear + 1}
+												</p>
+											) : (
+												<p>
+													{remainingDays} days until{' '}
+													{currentYear + 1}
+												</p>
+											)}
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					)
-				)}
-			</section>
+						)
+					)}
+				</section>
+			) : (
+				<div className='mt-10 h-[50vh]  text-center '>loading...</div>
+			)}
 
 			<section className='card bg-base-300 mt-5'>
 				<div className='card-body text-center flex lg:flex-row lg:space-y-0 items-center lg:justify-between justify-center w-full'>
