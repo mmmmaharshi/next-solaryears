@@ -65,13 +65,14 @@ export default function Home() {
 												</p>
 											) : earthYears > 0 ? (
 												<p>
-													{earthYears} years, {remainingDays} days
-													until {currentYear + 1}
+													{earthYears} years,{' '}
+													{Number(remainingDays).toLocaleString()}{' '}
+													days until {currentYear + 1}
 												</p>
 											) : (
 												<p>
-													{remainingDays} days until{' '}
-													{currentYear + 1}
+													{Number(remainingDays).toLocaleString()}{' '}
+													days until {currentYear + 1}
 												</p>
 											)}
 										</div>
@@ -84,6 +85,23 @@ export default function Home() {
 			) : (
 				<div className='mt-10 h-[50vh]  text-center '>loading...</div>
 			)}
+
+			<section className='card bg-base-300 mt-5'>
+				<div className='card-body text-sm text-center'>
+					<p>
+						<span className='text-primary font-medium leading-relaxed'>
+							Disclaimer:
+						</span>{' '}
+						The planetary years are based on how many Earth days have
+						passed since{' '}
+						<span className='text-primary'>January 1, 2000</span>. Each
+						planet&apos;s year is calculated by how long it takes that
+						planet to orbit the Sun. The remaining days show how much time
+						is left until the next year on that planet starts. These are
+						estimates based on Earth&apos;s calendar.
+					</p>
+				</div>
+			</section>
 
 			<section className='card bg-base-300 mt-5'>
 				<div className='card-body text-center flex lg:flex-row lg:space-y-0 items-center lg:justify-between justify-center w-full'>
