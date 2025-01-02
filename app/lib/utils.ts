@@ -67,15 +67,16 @@ export const calculatePlanetaryYear = (yearLength: number) => {
 	// Days passed in the current planetary year
 	const daysIntoCurrentYear = daysSinceReference % yearLength;
 
-	// Days until the next planetary year
-	const daysUntilNewYear = yearLength - daysIntoCurrentYear;
+	// Days until the next planetary year (rounding to avoid fractional errors)
+	const daysUntilNewYear = Math.round(yearLength - daysIntoCurrentYear);
 
-	// Fix for edge cases: Ensure remainingDays rounds properly
-	const remainingDays = Math.round(daysUntilNewYear);
+	// Convert remaining days into Earth years and days
+	const earthYears = Math.floor(daysUntilNewYear / 365); // Full Earth years
+	const remainingDays = Math.round(daysUntilNewYear % 365); // Remaining days after full Earth years
 
 	return {
 		currentYear,
 		remainingDays, // Remaining days in the current planetary year
-		earthYears: Math.floor(daysUntilNewYear / 365), // Remaining Earth years until next planetary year
+		earthYears, // Remaining Earth years until next planetary year
 	};
 };

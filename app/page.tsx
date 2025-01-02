@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { calculatePlanetaryYear, planetsData } from './lib/utils';
+
 interface Planet {
 	name: string;
 	description: string;
@@ -65,14 +66,19 @@ export default function Home() {
 												</p>
 											) : earthYears > 0 ? (
 												<p>
-													{earthYears} years,{' '}
+													{earthYears} year
+													{earthYears > 1 ? 's' : ''},{' '}
 													{Number(remainingDays).toLocaleString()}{' '}
-													days until {currentYear + 1}
+													day
+													{remainingDays > 1 ? 's' : ''} until{' '}
+													{currentYear + 1}
 												</p>
 											) : (
 												<p>
 													{Number(remainingDays).toLocaleString()}{' '}
-													days until {currentYear + 1}
+													day
+													{remainingDays > 1 ? 's' : ''} until{' '}
+													{currentYear + 1}
 												</p>
 											)}
 										</div>
@@ -83,7 +89,7 @@ export default function Home() {
 					)}
 				</section>
 			) : (
-				<div className='mt-10 h-[50vh]  text-center '>loading...</div>
+				<div className='mt-10 h-[50vh] text-center'>loading...</div>
 			)}
 
 			<section className='card bg-base-300 mt-5'>
@@ -96,8 +102,8 @@ export default function Home() {
 						passed since{' '}
 						<span className='text-primary'>January 1, 2000</span>. Each
 						planet&apos;s year is calculated by how long it takes that
-						planet to orbit the Sun. The remaining days show how much time
-						is left until the next year on that planet starts. These are
+						planet to orbit the Sun. The remaining time shows how much is
+						left until the next year on that planet starts. These are
 						estimates based on Earth&apos;s calendar.
 					</p>
 				</div>
